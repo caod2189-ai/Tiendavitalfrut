@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - VitalFrut</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1></h1>
+    <nav>
+      <a href="index.html">Volver a la tienda</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Tu Carrito</h2>
+      <table id="carrito-tabla">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Unidad</th>
+            <th>Precio</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="carrito-body">
+          <!-- Se llena con JS -->
+        </tbody>
+      </table>
+      <h3>Total: $<span id="total">0</span></h3>
+      <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+      <button onclick="Pagar()">Pagar</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

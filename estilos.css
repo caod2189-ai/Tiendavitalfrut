@@ -1,0 +1,342 @@
+/* --------- RESET --------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f909; /* Un color neutro para el resto */
+}
+
+
+/* --------- HEADER --------- */
+header {
+  background: rgba(115, 140, 61, 0.233); 
+  color: #bc4a20; 
+   backdrop-filter: blur(10px);          /* Difumina el fondo detrás */
+  -webkit-backdrop-filter: blur(10px);  /* Compatibilidad Safari */
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed; /* cambio clave */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.3s; /* animación suave al ocultar/mostrar */
+}
+
+header.hide {
+  top: -120px; /* ajusta según la altura de tu header */
+}
+
+
+/* --------- HERO (banner de inicio) --------- */
+.hero {
+  height: 100vh;
+  background: url("imagenes/bannerfondo.JPG") no-repeat center center/cover;
+  background-repeat: no-repeat;
+  background-position: center top; /* inicia desde la parte superior */
+  background-size: cover; /* llena todo el contenedor */
+  background-attachment: fixed; /* efecto parallax al hacer scroll */
+  display: flex;
+  justify-content: flex-start; /* mueve el contenido al inicio (izquierda) */
+  align-items: center;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  position: relative;
+  padding-left: 360px; /* ajusta según quieras separarlo del borde */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.075); /* oscurece un poco la imagen para mejorar el contraste */
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-hero {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background: #DA5827;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+
+header .logo img {
+  height: 40px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 80px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* --------- BUSCADOR --------- */
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.buscador input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 180px;
+}
+
+.buscador button {
+  background: #F2F2F2;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buscador button:hover {
+  background: #2e7d32;
+}
+
+/* --------- MAIN --------- */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #DA5827;
+  border-bottom: 2px solid #BCBF38;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* --------- PRODUCTOS --------- */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Imagen de fondo para la sección de Frutas */
+#frutas {
+  background: url("imagenes/fondo.png") no-repeat center center/cover;
+  padding: 60px 30px; /* espacio interno para que el contenido no quede pegado */
+}
+
+/* Imagen de fondo para la sección de Verduras */
+#verduras {
+  background: url("imagenes/fondo.png") no-repeat center center/cover;
+  padding: 40px 20px;
+}
+
+/* Imagen de fondo para la sección de Verduras */
+#granos {
+  background: url("imagenes/fondo.png") no-repeat center center/cover;
+  padding: 40px 20px;
+}
+
+/* Imagen de fondo para la sección de Verduras */
+#lacteos {
+  background: url("imagenes/fondo.png") no-repeat center center/cover;
+  padding: 40px 20px;
+}
+
+.producto {
+  background: rgba(55, 56, 55, 0.205); /* blanco con 80% de opacidad */
+   backdrop-filter: blur(10px);          /* Difumina el fondo detrás */
+  -webkit-backdrop-filter: blur(10px);  /* Compatibilidad Safari */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+  flex: 1 1 calc(25% - 20px);
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.producto p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.producto input,
+.producto select {
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.producto button {
+  margin-top: 8px;
+  padding: 8px;
+  background: #DA5827;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.producto button:hover {
+  background: #388e3c;
+}
+
+/* --------- TÍTULO DEL CARRITO --------- */
+section h2 {
+  margin-top: 30px; /* mueve el título hacia abajo */
+  margin-bottom: 20px; /* separa del resto de elementos */
+  color: #DA5827;
+  font-size: 1.8rem;
+  text-align: center; /* opcional: centra el título */
+}
+
+
+/* --------- CARRITO --------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* menos que antes para equilibrar con h2 */
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background: #D95827;
+  color: #fff;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #b61f1f50;
+}
+
+/* Botones generales */
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Botón Vaciar */
+button.vaciar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.vaciar:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Botón Pagar */
+button.pagar {
+  background-color: #27ae60;
+  color: white;
+  margin-left: 10px;
+}
+
+button.pagar:hover {
+  background-color: #1e8449;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* --------- FOOTER --------- */
+footer {
+  background: rgba(51, 51, 51, 0.4); /* Gris oscuro con transparencia */
+  backdrop-filter: blur(8px);        /* Difumina el fondo */
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1000;
+}
+
+footer .redes a {
+  color: #4caf50;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+footer .redes a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+

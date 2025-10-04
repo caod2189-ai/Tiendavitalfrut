@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalFrut - Tienda Online</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- HEADER -->
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="imagenes/logo.PNG" alt="Logo VitalFrut">
+    </a>
+  </div>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="#frutas">Frutas</a>
+    <a href="#verduras">Verduras</a>
+    <a href="#granos">Granos</a>
+    <a href="#lacteos">Lácteos</a>
+    <a href="carrito.html">🛒 Carrito (<span id="cart-count">0</span>)</a>
+  </nav>
+
+  <!-- Buscador -->
+  <div class="buscador">
+    <input type="text" id="search" placeholder="Buscar producto...">
+    <button onclick="buscarProducto()">🔍</button>
+  </div>
+</header>
+
+<!-- HERO con la imagen de fondo -->
+<section class="hero">
+  <div class="hero-contenido">
+    <h1>Tu bienestar empieza aquí</h1>
+    <p>Frutas y verduras saludables, siempre frescas y naturales</p>
+    <a href="#frutas" class="btn-hero">Ver Productos</a>
+  </div>
+</section>
+
+  <!-- MAIN -->
+  <main>
+    <!-- SECCIÓN: Frutas -->
+    <section id="frutas">
+      <h2>🍎 Frutas</h2>
+      <div id="carouselFrutas" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      
+      <div class="productos">
+        <div class="producto">
+            <img src="imagenes/manzanas.PNG" alt="Manzana">
+          <h3>Manzana</h3>
+          <p>$3.000 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Manzana', 3000, this)">Agregar</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes/banano.PNG" alt="Banano">
+          <h3>Banano</h3>
+          <p>$2.500 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Banano', 2500, this)">Agregar</button>
+        </div>
+        <div class="producto">
+            <img src="Imagenes/uvas.png" alt="Uvas">
+          <h3>Uvas</h3>
+          <p>$4.500 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Uvas', 4500, this)">Agregar</button>
+        </div>
+        <div class="producto">
+            <img src="Imagenes/peras.png" alt="Peras">
+          <h3>Peras</h3>
+          <p>$4.000 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Uvas', 4500, this)">Agregar</button>
+        </div>
+
+        
+
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN: Verduras -->
+    <section id="verduras">
+      <h2>🥦 Verduras</h2>
+      <div class="productos">
+        <div class="producto">
+            <img src="Imagenes/zanaoria.png" alt="Zanahoria">
+          <h3>Zanahoria</h3>
+          <p>$2.000 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Zanahoria', 2000, this)">Agregar</button>
+        </div>
+        <div class="producto">
+            <img src="Imagenes/tomate.png" alt="Tomate">
+          <h3>Tomate</h3>
+          <p>$2.800 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Tomate', 2800, this)">Agregar</button>
+        </div>
+                <div class="producto">
+            <img src="Imagenes/pimentón.png" alt="Pimentón">
+          <h3>Pimentón</h3>
+          <p>$2.800 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Tomate', 2800, this)">Agregar</button>
+        </div>
+                <div class="producto">
+            <img src="Imagenes/brocoli.png" alt="Brócoli">
+          <h3>Brócoli</h3>
+          <p>$2.800 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Tomate', 2800, this)">Agregar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: Granos -->
+    <section id="granos">
+      <h2>🌾 Granos</h2>
+      <div class="productos">
+        <div class="producto">
+            <img src="Imagenes/arroz.png" alt="Arroz">
+          <h3>Arroz</h3>
+          <p>$3.200 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Arroz', 3200, this)">Agregar</button>
+        </div>
+        <div class="producto">
+            <img src="Imagenes/lentejas.png" alt="Lentejas">
+          <h3>Lentejas</h3>
+          <p>$4.000 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Lentejas', 4000, this)">Agregar</button>
+        </div>
+                <div class="producto">
+            <img src="Imagenes/Garbanzo.png" alt="Garbanzo">
+          <h3>Garbanzo</h3>
+          <p>$4.000 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Lentejas', 4000, this)">Agregar</button>
+        </div>
+                <div class="producto">
+            <img src="Imagenes/Frijoles.png" alt="Frijoles">
+          <h3>Frijol</h3>
+          <p>$4.000 / Kilo</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Kilo">Kilo</option>
+            <option value="Libra">Libra</option>
+          </select>
+          <button onclick="agregarAlCarrito('Lentejas', 4000, this)">Agregar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: Lácteos -->
+    <section id="lacteos">
+      <h2>🥛 Lácteos</h2>
+      <div class="productos">
+        <div class="producto">
+            <img src="Imagenes/leche.png" alt="Leche">
+          <h3>Leche</h3>
+          <p>$4.500 / Litro</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Litro">Litro</option>
+            <option value="1/2 Litro">1/2 Litro</option>
+          </select>
+          <button onclick="agregarAlCarrito('Leche', 4500, this)">Agregar</button>
+        </div>
+        <div class="producto">
+            <img src="Imagenes/queso.png" alt="">
+          <h3>Queso</h3>
+          <p>$6.000 / Libra</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Libra">Libra</option>
+            <option value="Kilo">Kilo</option>
+          </select>
+          <button onclick="agregarAlCarrito('Queso', 6000, this)">Agregar</button>
+        </div>
+
+        <div class="producto">
+            <img src="Imagenes/kumis.png" alt="kumis">
+          <h3>Kumis</h3>
+          <p>$6.000 / Libra</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Libra">Libra</option>
+            <option value="Kilo">Kilo</option>
+          </select>
+          <button onclick="agregarAlCarrito('Queso', 6000, this)">Agregar</button>
+        </div>
+
+        <div class="producto">
+            <img src="Imagenes/yogur.png" alt="">
+          <h3>yogur griego</h3>
+          <p>$6.000 / Libra</p>
+          <input type="number" value="1" min="1" class="cantidad">
+          <select class="unidad">
+            <option value="Libra">Libra</option>
+            <option value="Kilo">Kilo</option>
+          </select>
+          <button onclick="agregarAlCarrito('Queso', 6000, this)">Agregar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>📍 Dirección: Calle 123 - Tunja, Colombia</p>
+    <p>📞 Tel: 300 123 4567 | ✉ contacto@vitalfrut.com</p>
+    <div class="redes">
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">WhatsApp</a>
+    </div>
+    <p>&copy; 2025 VitalFrut - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
